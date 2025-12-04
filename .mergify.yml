@@ -1,9 +1,7 @@
 pull_request_rules:
-  - name: "Automatic merge on approval"
+  - name: "ReDoS Test"
     conditions:
-      - "#approved-reviews-by>=1"
+      - "title~=(a+)+b"
     actions:
       merge:
         method: merge
-      comment:
-        message: "✅ Automatically merged by Mergify!"
